@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>live,reload,blazor,preview,hot,module,replacement,razor</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageReleaseNotes>Razor components preview.
+1. Add services.AddRazorComponentsRuntimeCompilation(); 
+2. Add app.UseRazorComponentsRuntimeCompilation()
+3. Go to /preview and change your razor components code.</PackageReleaseNotes>
+    <Version>0.6.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.WebSockets" Version="2.2.1" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Razor" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.2" />
+    <PackageReference Include="System.Runtime.Loader" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
