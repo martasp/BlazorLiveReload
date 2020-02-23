@@ -224,7 +224,7 @@ namespace RazorComponentsPreview
             }
             else
             {
-                Console.WriteLine("Not conectected to webSocket, go to /preivew page");
+                Console.WriteLine("Not conectected to webSocket, go to /preview page");
             }
         }
         private string RenderRazorFileToHtml(string name)
