@@ -84,11 +84,14 @@ namespace RazorComponentsPreview
             files.Insert(0, razorImportsFile);
 
             //hack for to get dependencies from Test
-            var item = files.SingleOrDefault(item => item.FilePath.Contains("App.razor"));
-            var fixedAPPcontent = item.Content.Replace("@typeof(", "@typeof(Test.").Replace("Program", "Counter"); //Todo change name "Counter" to dynamic type from Test Assemebly
-            files.Remove(item);
-            files.Add((item.FilePath, fixedAPPcontent));
+            var appRazorItem = files.SingleOrDefault(item => item.FilePath.Contains("App.razor"));
 
+            if (appRazorItem != default)
+            {
+                var fixedAPPcontent = appRazorItem.Content.Replace("@typeof(", "@typeof(Test.").Replace("Program", "Counter"); //Todo change name "Counter" to dynamic type from Test Assemebly
+                files.Remove(appRazorItem);
+                files.Add((appRazorItem.FilePath, fixedAPPcontent));
+            }
 
             return files;
         }
