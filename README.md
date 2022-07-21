@@ -1,4 +1,6 @@
-# BlazorLiveReload
+# (Hot reload is suported in .net core out of the box, so this library is obsolete)
+
+# BlazorLiveReload 
 Blazor Live Reload without refreshing page
 ### Installing
 1.Add package: 
